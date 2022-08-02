@@ -1,0 +1,102 @@
+.chatRoom {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--item);
+  display: grid;
+  grid-template-rows: 10% 80% 10%;
+  height: 90vh;
+}
+
+.chatHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 2px solid var(--background-1);
+  padding-bottom: 20px;
+}
+
+.chatHeader div {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.messages {
+  max-height: 100%;
+  overflow-y: auto;
+  margin-top: 20px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.messageContainer {
+  width: 100%;
+  align-self: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.currUserMessage {
+  grid-column: 2;
+  display: flex;
+  justify-self: end;
+  background-color: var(--blue);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.friendMessage {
+  grid-column: 1;
+  display: flex;
+  justify-self: start;
+  background-color: var(--hover);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.sendMessage {
+  padding-top: 20px;
+  display: flex;
+  gap: 1rem;
+}
+
+.sendMessage button {
+  background-color: var(--hover);
+  padding: 10px;
+  color: white;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: .9;
+}
+
+.sendMessage button:hover {
+  opacity: 1;
+}
+
+
+.sendMessage textarea {
+  width: 100%;
+  background-color: var(--background-1);
+  padding: 1rem;
+  color: white;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  resize: none;
+}
+
+.sendMessage textarea:hover,.sendMessage textarea:focus {
+  outline: none;
+}
+

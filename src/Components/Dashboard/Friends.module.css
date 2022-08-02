@@ -1,0 +1,115 @@
+.menu {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  background-color: var(--item);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  max-height: 20vh;
+}
+
+.menu li {
+  cursor: pointer;
+  background-color: var(--hover);
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: .9;
+}
+
+.menu li:hover {
+  cursor: pointer;
+  background-color: var(--hover);
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.addFriendsArea {
+  padding-top: 20px;
+}
+
+.addFriendsArea h1 {
+  margin-bottom: 10px;
+}
+
+.addFriendsArea p {
+  margin-bottom: 10px;
+}
+
+.addFriendsArea form {
+  background-color: var(--item);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.addFriendsArea form input{
+  background-color: var(--background-1);
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.addFriendsArea form input:hover,.addFriendsArea form input:focus {
+  outline: none;
+}
+
+.addFriendsArea form button{
+  background-color: var(--hover);
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: .9;
+}
+
+.addFriendsArea form button:hover {
+  opacity: 1;
+}
+
+.friendList {
+  display: grid;
+  gap: 1rem;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.friendList li {
+  background-color: var(--item);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.friendList li div:nth-child(1) {
+  height: 60px;
+  width: 60px;
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.friendList li div:nth-child(2) p:nth-child(2) {
+  font-size: .875rem;
+  opacity: .6;
+  margin-top: 10px;
+}
+
+.friendList li:hover {
+  background-color: var(--hover);
+}
