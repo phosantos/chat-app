@@ -89,22 +89,23 @@ const ChatRoom = ({ groupID, userData }) => {
         <div
           style={{ backgroundImage: `url("${chatHeader?.photoURL}")` }}
         ></div>
-        <p>@{chatHeader?.username}</p>
+        <p>@{chatHeader && chatHeader.username}</p>
       </div>
       <ul className={styles.messages} ref={messageArea}>
-        {messages?.map((message) => (
-          <li className={styles.messageContainer} key={message.createdAt}>
-            <p
-              className={
-                message.sentBy === userData.uid
-                  ? styles.currUserMessage
-                  : styles.friendMessage
-              }
-            >
-              {message.message}
-            </p>
-          </li>
-        ))}
+        {messages &&
+          messages.map((message) => (
+            <li className={styles.messageContainer} key={message.createdAt}>
+              <p
+                className={
+                  message.sentBy === userData.uid
+                    ? styles.currUserMessage
+                    : styles.friendMessage
+                }
+              >
+                {message.message}
+              </p>
+            </li>
+          ))}
       </ul>
       <form onSubmit={sendMessage} className={styles.sendMessage}>
         <textarea

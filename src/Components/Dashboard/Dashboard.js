@@ -71,20 +71,21 @@ const Dashboard = () => {
           <div className={styles.openChats}>
             <h3>Conversas</h3>
             <ul className={styles.scroll}>
-              {openChats?.map((chat) => {
-                return (
-                  <ChatItem
-                    key={chat.id}
-                    chatID={chat.id}
-                    setGroupID={setGroupID}
-                    setTabnav={setTabnav}
-                    lastMessage={chat.lastMessage}
-                    friendID={chat.members.find(
-                      (member) => member !== userData.uid,
-                    )}
-                  />
-                );
-              })}
+              {openChats &&
+                openChats.map((chat) => {
+                  return (
+                    <ChatItem
+                      key={chat.id}
+                      chatID={chat.id}
+                      setGroupID={setGroupID}
+                      setTabnav={setTabnav}
+                      lastMessage={chat.lastMessage ? chat.lastMessage : ''}
+                      friendID={chat.members.find(
+                        (member) => member !== userData.uid,
+                      )}
+                    />
+                  );
+                })}
             </ul>
           </div>
         </div>

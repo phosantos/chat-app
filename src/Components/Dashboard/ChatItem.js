@@ -30,7 +30,7 @@ const ChatItem = ({ chatID, friendID, lastMessage, setGroupID, setTabnav }) => {
         <div>
           <p>@{data.username}</p>
           <p>
-            {lastMessage?.message.length > 15
+            {lastMessage && lastMessage.message.length > 15
               ? lastMessage.message.substring(0, 15) + '...'
               : lastMessage.message}
           </p>

@@ -88,18 +88,19 @@ const Friends = ({ userData, setGroupID, setTabnav }) => {
         </div>
       ) : (
         <ul className={styles.friendList}>
-          {friends.map((friend) => {
-            return (
-              <FriendItem
-                key={friend.uid}
-                userData={userData}
-                setGroupID={setGroupID}
-                setTabnav={setTabnav}
-                friend={friend}
-                friendID={friend.uid}
-              />
-            );
-          })}
+          {friends &&
+            friends.map((friend) => {
+              return (
+                <FriendItem
+                  key={friend.uid}
+                  userData={userData}
+                  setGroupID={setGroupID}
+                  setTabnav={setTabnav}
+                  friend={friend}
+                  friendID={friend.uid}
+                />
+              );
+            })}
         </ul>
       )}
     </>
